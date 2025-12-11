@@ -6,8 +6,8 @@ from .models import ( Product,
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('title', 'category', 'type', 'price_points', 'stock', 'is_limited', 'is_active')
-    fields = ('category', 'type', 'title', 'subtitle', 'image', 'price_points', 'old_price_points',
+    list_display = ('title', 'title_en', 'title_uz', 'title_ru', 'category', 'type', 'price_points', 'stock', 'is_limited', 'is_active')
+    fields = ('category', 'type', 'title', 'title_en', 'title_uz', 'title_ru', 'subtitle', 'subtitle_en', 'subtitle_uz', 'subtitle_ru', 'image', 'price_points', 'old_price_points',
               'sizes', 'is_one_size', 'stock', 'is_limited', 'is_active')
     search_fields = ('title', 'subtitle')
 
