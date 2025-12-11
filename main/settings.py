@@ -92,28 +92,28 @@ FILE_UPLOAD_MAX_MEMORY_SIZE = 52428800
 
 WSGI_APPLICATION = 'main.wsgi.application'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'shop_bot_db',
-        'USER': 'postgres',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
-
-#
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'db_shop_bot',
+#         'NAME': 'shop_bot_db',
 #         'USER': 'postgres',
 #         'PASSWORD': 'root',
-#         'HOST': 'db',
+#         'HOST': 'localhost',
 #         'PORT': '5432',
 #     }
 # }
+
+#
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'db_shop_bot',
+        'USER': 'postgres',
+        'PASSWORD': 'root',
+        'HOST': 'db',
+        'PORT': '5432',
+    }
+}
 
 
 

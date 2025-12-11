@@ -56,6 +56,6 @@ class PointsTransactionAdmin(admin.ModelAdmin):
 
 @admin.register(FAQ)
 class FAQAdmin(admin.ModelAdmin):
-    list_display = ('question', 'category', 'order', 'is_active')
-    fields = ('category', 'question', 'answer', 'order', 'is_active')
-    search_fields = ('question', 'category')
+    list_display = ('question', 'order', 'is_active')
+    fields = ('question', 'answer', 'order', 'is_active')
+    search_fields = ('question',)
