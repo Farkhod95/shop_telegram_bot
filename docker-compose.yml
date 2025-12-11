@@ -5,7 +5,7 @@ services:
     build: .
     container_name: shop_bot_web
     ports:
-      - "8088:8000"   # host:container (host 8088 -> container 8000)
+      - "8282:8000"   # host:container (host 8088 -> container 8000)
     volumes:
       - .:/app
       - static_volume:/app/scc_static
@@ -21,7 +21,7 @@ services:
     image: postgres:15
     container_name: db_shop_bot
     ports:
-      - "5432:5432"  # host 5432 -> container 5432
+      - "5433:5432"  # host 5433 -> container 5432
     environment:
       POSTGRES_DB: db_shop_bot
       POSTGRES_USER: postgres
