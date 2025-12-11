@@ -12,6 +12,14 @@ class LocaleSerializer(serializers.ModelSerializer):
     name_uz = serializers.CharField(allow_blank=False)
     name_ru = serializers.CharField(allow_blank=False)
 
+    title_en = serializers.CharField(allow_blank=False)
+    title_uz = serializers.CharField(allow_blank=False)
+    title_ru = serializers.CharField(allow_blank=False)
+
+    subtitle_en = serializers.CharField(allow_blank=False)
+    subtitle_uz = serializers.CharField(allow_blank=False)
+    subtitle_ru = serializers.CharField(allow_blank=False)
+
 
 class BaseLocaleSerializer(serializers.ModelSerializer):
     """
@@ -23,7 +31,7 @@ class BaseLocaleSerializer(serializers.ModelSerializer):
         'name',
     ]
     LANGS = ['en', 'uz', 'ru']
-    REQUIRED_BASES = {'name', }  # muhim maydonlar
+    REQUIRED_BASES = {'name', 'title', 'subtitle'}  # muhim maydonlar
 
     def get_fields(self):
         fields = super().get_fields()
@@ -57,7 +65,13 @@ class ProductListSerializer(serializers.ModelSerializer):
             'category_detail',
             'type',
             'title',
+            'title_en',
+            'title_uz',
+            'title_ru',
             'subtitle',
+            'subtitle_en',
+            'subtitle_uz',
+            'subtitle_ru',
             'image',
             'price_points',
             'old_price_points',
